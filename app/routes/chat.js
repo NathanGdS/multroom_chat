@@ -1,12 +1,12 @@
-module.exports = function(appication)
+module.exports = function(application)
 {
-    appication.post('/chat', function(req, res)
+    application.post('/chat', function(req, res)
     {
-        res.render('chat');
+        application.app.controllers.chat.iniciaChat(application, req, res);
     });
 
-    appication.get('/chat', function(req, res)
+    application.get('/chat', function(req, res)
     {
-        res.render('chat');
+        application.app.controllers.chat.iniciaChat(application, req, res);
     });
 }

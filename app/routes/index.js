@@ -2,6 +2,6 @@ module.exports = function(appication)
 {
     appication.get('/', function(req, res)
     {
-        res.render('index');
+        application.app.controllers.index.index(application, req, res);
     });
 }
