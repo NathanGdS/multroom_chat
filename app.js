@@ -7,6 +7,8 @@ var server = app.listen(800, function()
 
 var io = require('socket.io').listen(server);
 
+app.set('io', io)
+
 io.on("connection", function(socket)
 {
     console.log('Usuário conectou');   
@@ -15,4 +17,17 @@ io.on("connection", function(socket)
     {
         console.log("Usuário desconectou")
     });
+
+    socket.on('msgParaServidor', function(data)
+    {
+        socket.emit('msgParaCliente', 
+        {apelido: data.apelido, 
+        mensagem: data.mensagem});
+
+        socket.broadcast.emit('msgParaCliente', 
+        {apelido: data.apelido, 
+        mensagem: data.mensagem});
+    });
 })
+//on = ouve pedidos de execução
+//emit = pedido para executar alguma ação
