@@ -1,27 +1,19 @@
 {
-  "name": "multroom_chat",
+  "name": "multiroom_chat",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/NathanGdS/multroom_chat.git"
-  },
-  "author": "Nathan Garcia",
+  "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/NathanGdS/multroom_chat/issues"
-  },
-  "homepage": "https://github.com/NathanGdS/multroom_chat#readme",
   "dependencies": {
-    "body-parser": "^1.19.0",
+    "body-parser": "^1.17.2",
     "consign": "^0.1.6",
-    "ejs": "^2.6.1",
-    "express": "^4.16.4",
-    "express-validator": "^5.3.1",
-    "socket.io": "^2.2.0"
+    "ejs": "^2.5.6",
+    "express": "^4.15.3",
+    "express-validator": "^3.2.0",
+    "socket.io": "^2.0.3"
   }
 }
